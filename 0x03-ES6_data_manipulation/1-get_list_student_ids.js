@@ -7,8 +7,7 @@ export default function getListStudentIds(list) {
     return [];
   }
   const keys = [];
-  for (const obj of list) {
-    keys.push(obj.id);
-  }
+
+  list.map((elem) => keys.push(elem.id));
   return keys;
 }
