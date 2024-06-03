@@ -3,7 +3,7 @@
 */
 
 export default function getListStudentIds(list) {
-  if (typeof list !== typeof []) {
+  if (typeof list !== 'object') {
     return [];
   }
   const keys = [];
