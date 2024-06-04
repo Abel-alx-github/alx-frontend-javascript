@@ -1,5 +1,6 @@
 /*
- *Create a function named groceriesList that returns a map of groceries with the following items (name, quantity):
+ * Create a function named groceriesList that returns a map of groceries
+ * with the following items (name, quantity):
 
   Apples, 10
   Tomatoes, 10
@@ -9,10 +10,9 @@
  *
  */
 
-
 export default function groceriesList() {
-  const listOfGroceries = new Map([['Apples', 10], ['Tomatoes', 10], ['Pasta', 1], ['Rice', 1], [ 'Banana', 5]]);
+  const listOfList = [['Apples', 10], ['Tomatoes', 10], ['Pasta', 1], ['Rice', 1], ['Banana', 5]];
+  const listOfGroceries = new Map(listOfList);
 
   return listOfGroceries;
-
 }
