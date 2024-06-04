@@ -11,7 +11,7 @@
 
 export default function updateUniqueItems(mapItem) {
   if (!mapItem || !(mapItem instanceof Map)) {
-    return new TypeError('Cannot process');
+    throw new TypeError('Cannot process');
   }
   for (const [key, val] of mapItem) {
     if (val === 1) {
