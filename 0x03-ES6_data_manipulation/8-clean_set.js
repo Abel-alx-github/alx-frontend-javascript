@@ -8,13 +8,10 @@
  */
 
 export default function cleanSet(set, startString) {
-  if (startString === '') { return ''; }
+  if (startString === '' || typeof startString !== 'string') { return ''; }
 
-  let newString = '';
-  for (const i of set) {
-    if (i.startsWith(startString)) {
-      newString += `${i.slice(startString.length)}-`;
-    }
-  }
-  return newString.slice(0, -1);
+  const array = Array.from(set).filter((string) => string.startsWith(startString));
+
+  const newString = array.map((string) => string.slice(startString.length));
+  return newString.join('-');
 }
