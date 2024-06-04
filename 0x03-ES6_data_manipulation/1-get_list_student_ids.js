@@ -3,11 +3,9 @@
 */
 
 export default function getListStudentIds(list) {
-  if (typeof list !== 'object') {
+  if (!Array.isArray(list)) {
     return [];
   }
-  const keys = [];
-
-  list.map((elem) => keys.push(elem.id));
+  const keys = list.map((elem) => elem.id);
   return keys;
 }
