@@ -8,7 +8,7 @@
  */
 
 export default function cleanSet(set, startString) {
-  if (startString === '' || typeof startString !== 'string') { return ''; }
+  if (!startString || typeof startString !== 'string') { return ''; }
 
   const array = Array.from(set).filter((string) => string.startsWith(startString));
 
