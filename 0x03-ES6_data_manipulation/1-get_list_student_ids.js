@@ -6,6 +6,5 @@ export default function getListStudentIds(list) {
   if (!Array.isArray(list)) {
     return [];
   }
-  const keys = list.map((elem) => elem.id);
-  return keys;
+  return list.map((student) => student.id);
 }
