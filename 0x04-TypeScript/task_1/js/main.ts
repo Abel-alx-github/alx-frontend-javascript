@@ -19,3 +19,8 @@ interface Teacher {
     location: string;
     [anyKey: string]: any;
 }
+
+
+interface Directors extends Teacher {
+    numberOfReports: number; 
+}
