@@ -20,7 +20,56 @@ interface Teacher {
     [anyKey: string]: any;
 }
 
+// Extending the Teacher class
 
 interface Directors extends Teacher {
     numberOfReports: number; 
+}
+
+// Write a function printTeacher:
+
+// It accepts two arguments firstName and lastName
+// It returns the first letter of the firstName and the full lastName
+// Example: printTeacher("John", "Doe") -> J. Doe
+
+
+interface printTeacherFunction {
+    (firstName: string, lastName: string,) : void;
+}
+
+const printTeacher : printTeacherFunction = (firstName: string, lastName: string) : void => {
+    console.log(`${firstName[0]}. ${lastName}`)
+}
+
+
+// Write a Class named StudentClass:Write a Class named StudentClass:
+
+
+// interface for the class
+
+interface StudentClassInterface {
+    firstName: string,
+    lastName: string,
+    workOnHomework(): string,
+    displayName(): string, 
+
+}
+
+
+class StudentClass implements StudentClassInterface {
+    firstName: string;
+    lastName: string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName =  firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework(): string{
+        return('Currently working');
+    }
+
+    displayName(): string {
+        return this.firstName;
+    }
 }
